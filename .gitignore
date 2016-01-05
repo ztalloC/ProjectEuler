@@ -1,0 +1,6 @@
+# Ignore compiled python code.
+*.pyc
+# Ignore the data directory.
+proj_euler/problems/data/
+# Ignore the C bin directory.
+c/problems/bin/
