@@ -5,10 +5,10 @@ Created on Tue Jan  5 21:26:43 2016
 @author: mjcosta
 """
 
+import argparse
+
 from proj_euler.utils.timing import timefunc
 from proj_euler.problems.p103 import check_special_sumset
-
-import argparse
 
 # Given a list of strings representing the data, computes the sum of the
 # special sum sets.

@@ -5,9 +5,10 @@ Created on Sat Sep  5 14:06:55 2015
 @author: mjcosta
 """
 
-from proj_euler.utils.timing import timefunc
 import itertools
 import numpy
+
+from proj_euler.utils.timing import timefunc
 
 # Given two points (numpy arrays), returns true if a right triangle
 def is_right_triangle(a, b):

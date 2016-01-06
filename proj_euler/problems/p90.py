@@ -5,8 +5,9 @@ Created on Sat Sep  5 13:15:17 2015
 @author: mjcosta
 """
 
-from proj_euler.utils.timing import timefunc
 import itertools
+
+from proj_euler.utils.timing import timefunc
 
 # Given a tuple of numbers, returns a set where 6 and 9 are both in the set
 # if either one is available in the original tuple

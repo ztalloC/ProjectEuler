@@ -8,6 +8,7 @@ Created on Sun Sep 20 07:23:56 2015
 import numpy as np
 import itertools
 import optparse
+
 from proj_euler.utils.timing import timefunc
 
 class Sudoku:

@@ -5,9 +5,10 @@ Created on Sun Oct 18 16:07:18 2015
 @author: mjcosta
 """
 
-from collections import namedtuple
-from proj_euler.utils.timing import timefunc
 import argparse
+from collections import namedtuple
+
+from proj_euler.utils.timing import timefunc
 
 
 # Represents a point in a two dimensional plane

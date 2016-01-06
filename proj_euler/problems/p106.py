@@ -5,9 +5,9 @@ Created on Tue Jan  5 23:13:18 2016
 @author: mjcosta
 """
 
-from proj_euler.utils.timing import timefunc
-
 from copy import deepcopy
+
+from proj_euler.utils.timing import timefunc
 
 # Given a list, generates the power set of that iterable
 def power_set(l):

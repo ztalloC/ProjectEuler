@@ -5,8 +5,9 @@ Created on Tue Jan  5 17:26:10 2016
 @author: mjcosta
 """
 
-from proj_euler.utils.timing import timefunc
 from collections import namedtuple
+
+from proj_euler.utils.timing import timefunc
 
 # Represents the sum of a set of numbers, storing the count of values as well.
 SubsetSum = namedtuple('SubsetSum', 'sum, count')

@@ -5,9 +5,10 @@ Created on Sat Sep  5 08:37:18 2015
 @author: mjcosta
 """
 
+from collections import namedtuple
+
 from proj_euler.utils import primes
 from proj_euler.utils.timing import timefunc
-from collections import namedtuple
 
 MinPSumRecord = namedtuple('MinPSumRecord', 'factors, product, sum')
 

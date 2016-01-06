@@ -7,6 +7,7 @@ Created on Sat Sep  5 23:10:32 2015
 
 import operator
 import itertools
+
 from proj_euler.utils.timing import timefunc
 
 # Calculates the set with the longest subsequence of arithmetic expressions

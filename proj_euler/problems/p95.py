@@ -5,10 +5,11 @@ Created on Sun Sep  6 00:12:45 2015
 @author: mjcosta
 """
 
-from proj_euler.utils.timing import timefunc
-from proj_euler.utils.primes import generate_primes
 from operator import mul
 from collections import defaultdict
+
+from proj_euler.utils.timing import timefunc
+from proj_euler.utils.primes import generate_primes
 
 # Calculates the sum of the proper divisors given n
 def calc_div_sum(n, factors, mem):

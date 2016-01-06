@@ -6,9 +6,12 @@ Created on Sun Sep 20 07:23:56 2015
 """
 
 import optparse
-from proj_euler.utils.timing import timefunc
-from collections import defaultdict
 import itertools
+
+from collections import defaultdict
+
+from proj_euler.utils.timing import timefunc
+
 
 # Given a comma separated string of quoted words, returns a list of words
 def parse_word_input(s):
