@@ -37,7 +37,7 @@ def calc_div_sum(n, factors, mem):
 def gen_composite(limit):
     result = dict()
     result[1] = defaultdict(int)
-    ps = generate_primes(limit/2)
+    ps = list(generate_primes(limit/2))
     def rec_composite(n, ps, fact):
         p = ps[0]
         curr = n * p

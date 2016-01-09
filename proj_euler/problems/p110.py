@@ -52,7 +52,7 @@ def find_min_target(target, primes, fact, limit):
     
 @timefunc
 def solve_p110(target, prime_limit, exp_limit):
-    ps = generate_primes(prime_limit)
+    ps = list(generate_primes(prime_limit))
     best_fact = find_min_target(target, ps, dict(), exp_limit)
     return prod_fact(best_fact)
 

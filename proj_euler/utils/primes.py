@@ -14,7 +14,7 @@ def factor_int_dict(n):
 
 # Given an integer limit, returns a list of primes <= limit
 def generate_primes(n):
-    return list(sympy.ntheory.generate.primerange(1,n+1))
+    return sympy.ntheory.generate.primerange(1,n+1)
     
 # Given the dictionary prime factorization, computes the number of factors.
 def num_factors(pfact):
