@@ -50,6 +50,20 @@ def solve_p118():
     for perm in permutations(range(1, 10)):
         result += count_valid_partitions(perm)
     return result
-    
+   
+"""
+Thoughts: This was a reasonable problem. My first thought was to generate
+all the primes, filter, and then combine. However, just generating the primes
+(up to 8 digits since 9 digits aren't relevant) was slow, so I decided not to.
+The later approach (remniscent of previous problems) was just to generate
+all possible values with the given digits and filter based on primality. In
+this case, I also had to transform the permutations into ordered sets by
+partitioning them. 
+
+The speed was okay, but not great (around 19 seconds). For this problem I also
+created a memoization decorator (using the classical recipe). It made sense for
+this problem, but I might not always use it since I like having flexibility
+with memoization (by doing it manually).
+"""
 if __name__ == "__main__":
     print solve_p118()
