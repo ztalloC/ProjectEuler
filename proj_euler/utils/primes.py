@@ -4,6 +4,8 @@ import sympy
 import sympy.ntheory.generate
 import sympy.ntheory.primetest
 
+from sympy.ntheory.generate import Sieve
+
 # Given a number, returns a list of integer prime factors
 def factor_int(n):
     factors = sympy.factorint(n)
@@ -20,6 +22,14 @@ def generate_primes(n):
 # Returns a generator for primes within the range [a, b).
 def generate_primerange(a, b):
     return sympy.ntheory.generate.primerange(a, b)
+
+# Returns an infinite generator of primes, can optionally specify from which
+# value prime to start from.
+def generate_infinite_primes(start = 1):
+    s = Sieve()
+    while True:
+        yield s[start]
+        start += 1
 
 # Tests whether a number is prime.
 def test_primality(n):

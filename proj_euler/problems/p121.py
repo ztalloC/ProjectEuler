@@ -48,6 +48,17 @@ def solve_p121(turns, verbose=True):
     # Result is simply the expected number of games before a win, rounded down.
     return int(d/n)
     
+"""
+Thoughts: A nice review on computing basic probabilities. Very simple to solve,
+it was just a matter of counting possibilities. The only trouble I had was with
+a rounding error (a typo from switching from computing the winning to computing
+the losing probability), which was easy to fix. The approach is basically to
+just count the number of ways one can lose and then subtract that from the
+total possibilities to get the number of winnining possibilities. Computing the
+losing probabilities was easier (even though there was more of them) since I
+just had to multiply the number of red disks together. Blues had numerators
+equal to 1, so I could just leave them out.
+"""
 if __name__ == "__main__":
     print "Example (n = 4) (Expect 10):"
     print solve_p121(4)
