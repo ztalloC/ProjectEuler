@@ -15,6 +15,11 @@ def factor_int(n):
 def factor_int_dict(n):
     return sympy.factorint(n)
 
+# Given a number, returns a partial factorization of n, considering primes
+# up to the given limit.
+def partial_factor(n, limit):
+    return sympy.factorint(n, limit=limit)
+
 # Given an integer limit, returns a generator for primes <= limit
 def generate_primes(n):
     return sympy.ntheory.generate.primerange(1,n+1)
