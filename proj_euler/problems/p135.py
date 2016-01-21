@@ -10,14 +10,16 @@ from collections import defaultdict
 
 from proj_euler.utils.timing import timefunc
 
-
+# Counts the number of distinct solutions for the equation x^2 - y^2 - z^2 = n
+# where x, y, and z are positive integers in an arithmetic progression and
+# n < limit. Returns the number of values of n with target distinct solutions.
 @timefunc
 def solve_p135(limit, target):
     counts = defaultdict(int)
     f = lambda x, d: -(x - 5*d) * (x - d)
     d = 1
     # Iterate over the differences, stop if the least value exceeds limit.
-    while f(d + 1, d) <= limit:
+    while f(d + 1, d) < limit:
         x = d + 1
         # The max value is at 3d
         xlimit = 3 * d
@@ -33,7 +35,7 @@ def solve_p135(limit, target):
                 counts[v] += 2
             x += 1
         # If we did not stop prematurely before 3d, add the unique value at 3d.
-        if x == xlimit:
+        if x == xlimit and f(x, d) < limit:
             counts[f(x, d)] += 1
         d += 1
     return sum(1 for k in counts if counts[k] == target)
