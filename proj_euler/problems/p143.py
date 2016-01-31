@@ -27,5 +27,27 @@ def precompute_pairs(limit):
                 matches[y].add(x)
     return matches
     
+@timefunc
+def exp_pairs(limit):
+    matches = defaultdict(set)
+    m = 0
+    fx = lambda m, n: n*n + 2*m*n
+    fy = lambda m, n: m*m - n*n
+    while fx(m, 0) + fy(m, 0) < limit:
+        # if y > 0 then n < m.
+        for n in xrange(m):
+            x, y = fx(m, n), fy(m, n)
+            if m == 7 and n == 6:
+                print x, y, "???"
+            if y < x:
+                k = 1
+                while k*(x+y) < limit:
+                    matches[y*k].add(x*k)
+                    k += 1
+        m += 1
+    return matches
+                
+            
+        
 if __name__ == "__main__":
     precompute_pairs(120000)
