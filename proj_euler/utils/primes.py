@@ -20,9 +20,18 @@ def factor_int_dict(n):
 def partial_factor(n, limit):
     return sympy.factorint(n, limit=limit)
 
-# Given an integer limit, returns a generator for primes <= limit
-def generate_primes(n):
-    return sympy.ntheory.generate.primerange(1,n+1)
+# Given an integer limit, returns a generator for primes <= limit. Uses the
+# sieve of Eratosthenes. Credit to: http://stackoverflow.com/a/3941967
+# It turns out that sympy is a lot slower.
+def generate_primes(limit):
+    limit = int(limit)                          # Need to convert to int.
+    a = [True] * limit                          # Initialize the primality list
+    a[0] = a[1] = False
+    for (i, isprime) in enumerate(a):
+        if isprime:
+            yield i
+            for n in xrange(i*i, limit, i):     # Mark factors non-prime
+                a[n] = False
     
 # Returns a generator for primes within the range [a, b).
 def generate_primerange(a, b):
