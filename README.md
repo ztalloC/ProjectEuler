@@ -38,8 +38,8 @@ input files (see the code for details).
 The python code also uses [sympy](http://www.sympy.org/en/index.html) for
 prime generation and factorization. In previous problems I wrote my own
 prime-related code, but since it is so commonly used in problems, I decided
-to replace my code with something faster. Some aspects of sympy can be
-surprisingly slow, so I may very well write my own code in the future.
+to replace my code with something faster. Not all of sympy is fast, so I
+might change my code in the future.
 
 ## Other comments
 
