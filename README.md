@@ -18,8 +18,15 @@ Originally, I was not going to put this up on Github. This is because some
 people will look up solutions to the questions and copy them (even though
 it defeats the purpose of the site, which is learning). However, there are
 many other sites with detailed solutions and explanations. Therefore, I
-decided it would be better to share my existing code, then keep it to
+decided it would be better to share my existing code, rather than keep it to
 myself.
+
+As a compromise, I have renamed my branch from "master" to "main". While this is
+slightly unusual, according to [this stackoverflow answer](http://stackoverflow.com/a/15987482)
+one can prevent branches from being indexed. This is because robots.txt allows
+indexing for the "master" branch, but restricts other branches. In this manner,
+I can share code with people who know my repository while making it harder for
+people to cheat.
 
 ## Usage
 
@@ -31,7 +38,8 @@ input files (see the code for details).
 The python code also uses [sympy](http://www.sympy.org/en/index.html) for
 prime generation and factorization. In previous problems I wrote my own
 prime-related code, but since it is so commonly used in problems, I decided
-to replace my code with something faster.
+to replace my code with something faster. Some aspects of sympy can be
+surprisingly slow, so I may very well write my own code in the future.
 
 ## Other comments
 
@@ -40,8 +48,9 @@ the code produces a solution, but some solutions finish instantly while
 others can take up to a few minutes run. The project euler home page
 specifies that all problems have solutions that take under a minute to run.
 While ultimately one just needs a solution to finish a problem, some of the
-code could be improved to be faster. Often I just start a problem by writing
-a brute force solution and optimizing it to get the time down. This is often
-sufficient, but many problems need mathematical insight to solve.
+code could be improved to be faster. Often I just start a problem by considering
+how long a brute force solution would take and how much I can optimize it. For
+earlier problems, this is sufficient, but later problems require intensive
+thought and mathematical knowledge to solve.
 
 ![My progress](https://projecteuler.net/profile/Cosmic.png)
