@@ -21,12 +21,12 @@ many other sites with detailed solutions and explanations. Therefore, I
 decided it would be better to share my existing code, rather than keep it to
 myself.
 
-As a compromise, I have renamed my branch from "master" to "main". While this is
+As a compromise, I have renamed the "master" branch to "main". While this is
 slightly unusual, according to [this stackoverflow answer](http://stackoverflow.com/a/15987482)
 one can prevent branches from being indexed. This is because robots.txt allows
 indexing for the "master" branch, but restricts other branches. In this manner,
 I can share code with people who know my repository while making it harder for
-people to cheat.
+people to cheat by searching on the internet.
 
 ## Usage
 
