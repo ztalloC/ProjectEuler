@@ -25,12 +25,12 @@ def partial_factor(n, limit):
 # It turns out that sympy is a lot slower.
 def generate_primes(limit):
     limit = int(limit)                          # Need to convert to int.
-    a = [True] * limit                          # Initialize the primality list
+    a = [True] * (limit+1)                      # Initialize the primality list
     a[0] = a[1] = False
     for (i, isprime) in enumerate(a):
         if isprime:
             yield i
-            for n in xrange(i*i, limit, i):     # Mark factors non-prime
+            for n in xrange(i*i, limit+1, i):     # Mark factors non-prime
                 a[n] = False
     
 # Returns a generator for primes within the range [a, b).
