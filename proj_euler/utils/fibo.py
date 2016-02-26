@@ -6,9 +6,7 @@ Created on Fri Jan 22 08:23:38 2016
 """
 
 # Returns an infinite generator of fibonacci numbers.
-def fibo_gen():
-    a = 1L
-    b = 1L
+def fibo_gen(a=1L, b=1L):
     yield a
     yield b
     while True:
