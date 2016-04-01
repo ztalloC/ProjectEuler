@@ -51,6 +51,7 @@ While ultimately one just needs a solution to finish a problem, some of the
 code could be improved to be faster. Often I just start a problem by considering
 how long a brute force solution would take and how much I can optimize it. For
 earlier problems, this is sufficient, but later problems require intensive
-thought and mathematical knowledge to solve.
+thought and mathematical knowledge to solve. In either case, getting the
+example cases correct is usually one of the first steps to solving problems.
 
 ![My progress](https://projecteuler.net/profile/Cosmic.png)
